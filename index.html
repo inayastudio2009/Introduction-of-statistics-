@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Economics Mock Test – Introduction to Statistics</title>
+<style>
+:root{--bg:#f4f6fb;--card:#fff;--ink:#1c2433;--mute:#5b6577;--line:#d9deea;--pri:#2f4ea2;--priInk:#fff;--ok:#1f8a4c;--okBg:#e3f5ea;--bad:#c63d3d;--badBg:#fbe7e7;--sel:#e6ecfb;--warn:#f0a93a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121722;--card:#1b2231;--ink:#eef1f8;--mute:#a3adc2;--line:#2f384c;--pri:#7f9cf0;--priInk:#0e1424;--ok:#5fd08c;--okBg:#173a28;--bad:#ff8585;--badBg:#43202a;--sel:#26324f}}
+:root[data-theme="dark"]{--bg:#121722;--card:#1b2231;--ink:#eef1f8;--mute:#a3adc2;--line:#2f384c;--pri:#7f9cf0;--priInk:#0e1424;--ok:#5fd08c;--okBg:#173a28;--bad:#ff8585;--badBg:#43202a;--sel:#26324f}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;font-size:18px;line-height:1.5}
+.wrap{max-width:680px;margin:0 auto;padding:16px}
+h1{font-size:24px;margin:4px 0 6px}
+h2{font-size:20px;margin:0 0 10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:14px}
+.mute{color:var(--mute);font-size:16px}
+ul.rules{padding-left:20px;margin:10px 0}
+button{font:inherit;font-size:17px;border-radius:10px;border:2px solid var(--pri);background:var(--card);color:var(--pri);padding:12px 16px;min-height:50px;cursor:pointer;font-family:Arial,Helvetica,sans-serif;font-weight:600}
+button.p{background:var(--pri);color:var(--priInk)}
+button:disabled{opacity:.4;cursor:default}
+button:focus-visible{outline:3px solid var(--warn);outline-offset:2px}
+.top{display:flex;justify-content:space-between;align-items:center;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:var(--mute);margin-bottom:8px}
+.tag{border:1px solid var(--line);border-radius:20px;padding:2px 10px;font-weight:700}
+.q{font-size:20px;font-weight:700;margin:6px 0 14px}
+.opt{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;background:var(--card);color:var(--ink);border:2px solid var(--line);margin-bottom:10px;padding:14px;font-weight:400;font-family:Georgia,serif;font-size:18px}
+.opt b{flex:0 0 30px;height:30px;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;font-family:Arial,sans-serif;font-size:15px}
+.opt.sel{border-color:var(--pri);background:var(--sel)}
+.opt.ok{border-color:var(--ok);background:var(--okBg)}
+.opt.bad{border-color:var(--bad);background:var(--badBg)}
+.fb{font-family:Arial,sans-serif;font-size:16px;font-weight:700;margin:4px 0 0;min-height:24px}
+.fb.ok{color:var(--ok)}.fb.bad{color:var(--bad)}
+.nav{display:flex;gap:10px;margin-top:12px}
+.nav button{flex:1}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.grid button{padding:0;min-height:48px;font-size:17px;border-color:var(--line);color:var(--ink)}
+.grid button.att{background:var(--ok);border-color:var(--ok);color:#fff}
+.grid button.cur{border-color:var(--warn);box-shadow:0 0 0 3px var(--warn)}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-family:Arial,sans-serif;font-size:14px;color:var(--mute);margin-top:10px}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:5px;border:2px solid var(--line)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.stat{border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center;font-family:Arial,sans-serif}
+.stat strong{display:block;font-size:24px}
+.stat span{font-size:14px;color:var(--mute)}
+.big{text-align:center;font-family:Arial,sans-serif}
+.big strong{font-size:48px;display:block;line-height:1.1}
+.rev{border-left:6px solid var(--line)}
+.rev.ok{border-left-color:var(--ok)}.rev.bad{border-left-color:var(--bad)}.rev.na{border-left-color:var(--warn)}
+.rev p{margin:6px 0;font-size:17px}
+.st{font-family:Arial,sans-serif;font-weight:700}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;padding:16px;z-index:20}
+.modal.on{display:flex}
+.modal .card{max-width:420px;width:100%;margin:0}
+.hide{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div id="start" class="card">
+  <h1>Economics Mock Test</h1>
+  <p class="mute">Class 11 · Bihar Board · Introduction to Statistics</p>
+  <ul class="rules">
+    <li>15 questions: 5 Easy, 5 Moderate, 5 Hard.</li>
+    <li>1 mark for each correct answer. No negative marking.</li>
+    <li>You can change an answer before you submit.</li>
+    <li>There is no countdown. Your time is shown after you submit.</li>
+  </ul>
+  <button class="p" id="begin" style="width:100%">Start Test</button>
+</div>
+
+<div id="test" class="hide">
+  <div class="card">
+    <div class="top"><span id="qno"></span><span class="tag" id="lvl"></span></div>
+    <div class="q" id="qtext"></div>
+    <div id="opts"></div>
+    <div class="fb" id="fb" aria-live="polite"></div>
+    <div class="nav">
+      <button id="prev">Previous</button>
+      <button id="next" class="p">Next</button>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Questions</h2>
+    <div class="grid" id="grid"></div>
+    <div class="legend">
+      <span><i style="background:var(--ok);border-color:var(--ok)"></i>Attempted</span>
+      <span><i></i>Unanswered</span>
+      <span><i style="border-color:var(--warn)"></i>Current</span>
+    </div>
+    <p class="mute" id="count"></p>
+    <button class="p" id="submit" style="width:100%">Submit Test</button>
+  </div>
+</div>
+
+<div id="result" class="hide">
+  <div class="card big">
+    <div class="mute">Your score</div>
+    <strong id="score"></strong>
+    <div class="mute" id="pct"></div>
+    <div class="stats">
+      <div class="stat"><strong id="rc"></strong><span>Correct</span></div>
+      <div class="stat"><strong id="rw"></strong><span>Wrong</span></div>
+      <div class="stat"><strong id="ru"></strong><span>Unattempted</span></div>
+      <div class="stat"><strong id="rt"></strong><span>Time taken</span></div>
+      <div class="stat"><strong id="se"></strong><span>Easy</span></div>
+      <div class="stat"><strong id="sm"></strong><span>Moderate</span></div>
+      <div class="stat" style="grid-column:1/3"><strong id="sh"></strong><span>Hard</span></div>
+    </div>
+    <button class="p" id="restart" style="width:100%">Restart Test</button>
+  </div>
+  <h2 style="margin:18px 4px 10px">Answer review</h2>
+  <div id="review"></div>
+  <button class="p" id="restart2" style="width:100%">Restart Test</button>
+</div>
+
+</div>
+
+<div class="modal" id="modal">
+  <div class="card" role="dialog" aria-modal="true">
+    <h2>Submit the test?</h2>
+    <p id="mtext"></p>
+    <div class="nav">
+      <button id="mno">Go back</button>
+      <button id="myes" class="p">Yes, submit</button>
+    </div>
+  </div>
+</div>
+
+<script>
+var L=["A","B","C","D"];
+var Q=[["Easy", "What is Statistics mainly concerned with in Economics?", ["Studying only stories", "Collecting, organising and analysing numerical data", "Studying only historical events", "Studying only individual opinions"], 1], ["Easy", "Which of the following is an example of statistical data?", ["The price of rice in different shops", "A poem", "A painting", "A personal diary"], 0], ["Easy", "Statistics helps economists to:", ["Make economic decisions using data", "Avoid collecting information", "Stop economic activities", "Replace all economic theories"], 0], ["Easy", "Which of the following is a quantitative fact?", ["The colour of a person's shirt", "The beauty of a building", "The income of a family", "The taste of a food item"], 2], ["Easy", "Statistics is useful in Economics because it helps to:", ["Understand economic problems with the help of data", "Remove all economic problems automatically", "Predict everything with complete accuracy", "Avoid studying the economy"], 0], ["Moderate", "In the plural sense, Statistics refers to:", ["Methods of data analysis only", "Numerical facts or data", "Economic theories only", "Personal opinions only"], 1], ["Moderate", "In the singular sense, Statistics refers to:", ["Numerical facts only", "Statistical methods used for collecting, organising, analysing and interpreting data", "Individual stories", "Historical dates only"], 1], ["Moderate", "Which of the following is an important function of Statistics?", ["Simplifying large amounts of data", "Making data more confusing", "Removing the need for research", "Giving opinions without evidence"], 0], ["Moderate", "Statistics helps in comparing two or more groups by using:", ["Only personal feelings", "Numerical information", "Imagination", "Unrelated stories"], 1], ["Moderate", "Which of the following is a limitation of Statistics?", ["It can help in comparison.", "It can summarise data.", "It can be misused if data is collected or presented incorrectly.", "It can help in economic planning."], 2], ["Hard", "Why are statistical facts generally studied in groups or aggregates?", ["Because Statistics is usually concerned with groups of facts rather than a single isolated fact.", "Because individual facts are always incorrect.", "Because groups cannot be compared.", "Because Statistics does not use numerical data."], 0], ["Hard", "Which statement best explains the importance of Statistics in economic planning?", ["It helps planners understand economic conditions and make informed plans.", "It guarantees that every plan will succeed.", "It removes the need for government decisions.", "It provides information without collecting data."], 0], ["Hard", "Why can Statistics sometimes give misleading conclusions?", ["When data is accurate and properly analysed", "When data is incomplete, biased or wrongly interpreted", "When data is arranged in tables", "When comparisons are made carefully"], 1], ["Hard", "Which statement about Statistics is correct?", ["Statistics can solve every economic problem by itself.", "Statistics is useful only in mathematics.", "Statistics supports economic analysis, but conclusions depend on the quality and proper use of data.", "Statistics does not help in decision-making."], 2], ["Hard", "A government compares unemployment data from different years to understand changes in employment. This is an example of Statistics helping in:", ["Economic comparison and analysis", "Creative writing", "Personal entertainment", "Avoiding economic research"], 0]];
+var ans,cur,t0,done;
+function $(i){return document.getElementById(i)}
+function show(id){["start","test","result"].forEach(function(x){$(x).classList.toggle("hide",x!==id)});window.scrollTo(0,0)}
+function begin(){ans=[];for(var i=0;i<Q.length;i++)ans.push(-1);cur=0;done=false;t0=Date.now();show("test");render()}
+function render(){
+  var q=Q[cur];
+  $("qno").textContent="Question "+(cur+1)+" of "+Q.length;
+  $("lvl").textContent=q[0];
+  $("qtext").textContent=q[1];
+  var o=$("opts");o.innerHTML="";
+  var a=ans[cur];
+  q[2].forEach(function(t,i){
+    var b=document.createElement("button");
+    b.className="opt";
+    if(a>-1){
+      if(i===q[3])b.className+=" ok";
+      else if(i===a)b.className+=" bad";
+      if(i===a&&i===q[3])b.className+=" ok";
+    }
+    b.innerHTML="<b>"+L[i]+"</b><span></span>";
+    b.lastChild.textContent=t;
+    b.onclick=function(){ans[cur]=i;render()};
+    o.appendChild(b);
+  });
+  var f=$("fb");f.className="fb";f.textContent="";
+  if(a>-1){
+    if(a===q[3]){f.className="fb ok";f.textContent="Correct!"}
+    else{f.className="fb bad";f.textContent="Wrong. Correct answer: "+L[q[3]]+". "+q[2][q[3]]}
+  }
+  $("prev").disabled=cur===0;
+  $("next").disabled=cur===Q.length-1;
+  var g=$("grid");g.innerHTML="";
+  var n=0;
+  Q.forEach(function(_,i){
+    var b=document.createElement("button");
+    b.textContent=i+1;
+    if(ans[i]>-1){b.className="att";n++}
+    if(i===cur)b.className+=" cur";
+    b.setAttribute("aria-label","Question "+(i+1)+(ans[i]>-1?", attempted":", unanswered"));
+    b.onclick=function(){cur=i;render()};
+    g.appendChild(b);
+  });
+  $("count").textContent=n+" attempted, "+(Q.length-n)+" unanswered";
+}
+function fmt(ms){var s=Math.round(ms/1000),m=Math.floor(s/60);s=s%60;return m+"m "+(s<10?"0":"")+s+"s"}
+function openModal(){
+  var un=ans.filter(function(x){return x<0}).length;
+  $("mtext").textContent=un>0?"You have "+un+" unanswered question"+(un>1?"s":"")+". You cannot change answers after submitting.":"You have answered all questions. You cannot change answers after submitting.";
+  $("modal").classList.add("on");
+}
+function finish(){
+  var ms=Date.now()-t0;done=true;
+  $("modal").classList.remove("on");
+  var c=0,w=0,u=0,lv={Easy:0,Moderate:0,Hard:0};
+  ans.forEach(function(a,i){
+    if(a<0)u++;else if(a===Q[i][3]){c++;lv[Q[i][0]]++}else w++;
+  });
+  $("score").textContent=c+" / "+Q.length;
+  $("pct").textContent=(c/Q.length*100).toFixed(1)+"%";
+  $("rc").textContent=c;$("rw").textContent=w;$("ru").textContent=u;
+  $("rt").textContent=fmt(ms);
+  $("se").textContent=lv.Easy+" / 5";$("sm").textContent=lv.Moderate+" / 5";$("sh").textContent=lv.Hard+" / 5";
+  var r=$("review");r.innerHTML="";
+  Q.forEach(function(q,i){
+    var a=ans[i],cls=a<0?"na":(a===q[3]?"ok":"bad");
+    var d=document.createElement("div");d.className="card rev "+cls;
+    var h=document.createElement("p");h.className="mute";h.textContent="Q"+(i+1)+" · "+q[0];
+    var t=document.createElement("p");t.style.fontWeight="700";t.textContent=q[1];
+    var s=document.createElement("p");s.textContent="Your answer: "+(a<0?"Not attempted":L[a]+". "+q[2][a]);
+    var k=document.createElement("p");k.textContent="Correct answer: "+L[q[3]]+". "+q[2][q[3]];
+    var st=document.createElement("p");st.className="st";
+    st.style.color=cls==="ok"?"var(--ok)":cls==="bad"?"var(--bad)":"var(--mute)";
+    st.textContent=cls==="ok"?"Correct":cls==="bad"?"Incorrect":"Unattempted";
+    [h,t,s,k,st].forEach(function(e){d.appendChild(e)});
+    r.appendChild(d);
+  });
+  show("result");
+}
+$("begin").onclick=begin;
+$("restart").onclick=begin;
+$("restart2").onclick=begin;
+$("prev").onclick=function(){if(cur>0){cur--;render()}};
+$("next").onclick=function(){if(cur<Q.length-1){cur++;render()}};
+$("submit").onclick=openModal;
+$("mno").onclick=function(){$("modal").classList.remove("on")};
+$("myes").onclick=finish;
+</script>
+</body>
+</html>
